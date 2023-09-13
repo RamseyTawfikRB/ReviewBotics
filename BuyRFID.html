@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Buy RFID</title>
+    <link href="BuyRFIDStyle.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="BuyRFIDscript.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="Pictures/Logo.webp" alt="ReviewBotics Logo" id="logo">
+        <h1>ReviewBotics</h1>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="Login.html">Log In</a>
+            <a href="buyrfid.html" class="active">Buy RFID</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: RFID Card Options -->
+        <section>
+            <h2>Select RFID Card Pack</h2>
+            <div class="rfid-selection">
+                <div class="rfid-card" tabindex="0">10 Pack - $39.99</div>
+                <div class="rfid-card" tabindex="0">20 Pack - $69.99</div>
+                <div class="rfid-card" tabindex="0">50 Pack - $149.99</div>
+            </div>
+        </section>
+
+        <!-- Section 2: Shipping Information -->
+        <section>
+            <h2>Shipping Information</h2>
+            <form class="info-form">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Address Line 1">
+                <input type="text" placeholder="Address Line 2 (Optional)">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="State/Province">
+                <input type="text" placeholder="Postal Code">
+                <input type="text" placeholder="Country">
+            </form>
+        </section>
+
+        <!-- Section 3: What Kind Of shipping -->
+        <section>
+            <h2>Shipping Method</h2>
+            <div class="shipping-option">
+                <input type="radio" id="express" name="shipping" value="express" required>
+                <label for="express">
+                    <strong>Priority Mail Express - 1 Day</strong>
+                    <span class="price">$49.45</span>
+                </label>
+            </div>
+
+            <div class="shipping-option">
+                <input type="radio" id="priority" name="shipping" value="priority" required>
+                <label for="priority">
+                    <strong>Priority Mail - 3 Days</strong>
+                    <span class="price">$22.60</span>
+                </label>
+            </div>
+
+            <div class="shipping-option">
+                <input type="radio" id="retail" name="shipping" value="retail" required>
+                <label for="retail">
+                    <strong>USPS Retail Ground - 7 Days</strong>
+                    <span class="price">$10.85</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Section 4: Input for RFID Links -->
+        <section>
+            <h2>Input RFID Links</h2>
+            <form class="info-form">
+                <label for="rfidLink">RFID Link</label>
+                <input type="url" id="rfidLink" placeholder="Enter RFID Link">
+
+                <label for="backupRfidLink">Backup RFID Link</label>
+                <input type="url" id="backupRfidLink" placeholder="Enter Backup RFID Link">
+            </form>
+        </section>
+
+        <button type="submit" id="checkoutButton">Proceed to Checkout</button>
+
+    </main>
+
+    <footer>
+        <p>© 2023 ReviewBotics. All rights reserved.</p>
+        <div>
+            <a href="https://www.facebook.com/profile.php?id=61551244585392" rel="noopener noreferrer" target="_blank">
+                <img alt="Facebook" src="Pictures/facebook.png" />
+            </a>
+            <a href="https://twitter.com/ReviewBotics" rel="noopener noreferrer" target="_blank">
+                <img alt="Twitter" src="Pictures/twitter.png" />
+            </a>
+            <a href="https://instagram.com/ReviewBotics" rel="noopener noreferrer" target="_blank">
+                <img alt="Instagram" src="Pictures/insta.jpg" />
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
