@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ReviewBotics</title>
+    <link rel="stylesheet" href="LoginStyle.css">
+    <link href="styles.css" rel="stylesheet" />
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="Pictures/Logo.webp" alt="ReviewBotics Logo" id="logo">
+        <h1>ReviewBotics</h1>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="Login.html">Log In</a>
+            <a href="buyrfid.html" class="active">Buy RFID</a>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <div class="login-section">
+        <h2>Log In to Your Account</h2>
+        <form class="login-form" action="login.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Log In</button>
+
+            <p class="error-message"></p>
+        </form>
+        <p class="create-account-link"><a href="CreateNewAccount.html">Create New Account</a></p>
+    </div>
+
+    <!-- Footer with Social Logos -->
+    <footer>
+        <p>&copy; 2023 ReviewBotics. All rights reserved.</p>
+        <div>
+            <a href="https://www.facebook.com/profile.php?id=61551244585392" target="_blank"
+                rel="noopener noreferrer"><img src="Pictures/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com/ReviewBotics" target="_blank" rel="noopener noreferrer"><img src="Pictures/twitter.png"
+                    alt="Twitter"></a>
+            <a href="https://www.instagram.com/reviewbotics/" target="_blank" rel="noopener noreferrer"><img
+                    src="Pictures/insta.jpg" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>

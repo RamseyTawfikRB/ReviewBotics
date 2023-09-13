@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+body {
+    background: linear-gradient(45deg, #f5f5f5, #e3e9ff);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #8BD8BC;
+}
+
+#logo {
+    width: 250px;
+    cursor: pointer;
+}
+
+h1, .col h3 {
+    font-weight: 700;
+    color: #8BD8BC;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+h1 {
+    margin-left: 1rem;
+}
+
+nav a {
+    margin: 0 0.7rem;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+nav a:hover, footer a:hover {
+    background-color: #8BD8BC;
+    color: white;
+    transform: translateY(-2px);
+}
+
+section {
+    background-color: #f2fcf9;
+    margin: 2.5rem 10%;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: white;
+    color: #333;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #8BD8BC;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    /* Vertically align the icons in case they have different heights */
+    justify-content: center;
+    /* Horizontally center the icons */
+}
+
+footer div a img {
+    width: 32px;
+    /* Example width; adjust as needed */
+    height: 32px;
+    /* Example height; adjust as needed */
+    object-fit: contain;
+    /* To ensure logos maintain their aspect ratio */
+    margin-right: 10px;
+    /* Optional: to provide some spacing between the icons */
+}
+
+/* Remove margin for the last icon to ensure even spacing */
+footer div a:last-child img {
+    margin-right: 0;
+}
+
+footer a {
+    color: #8BD8BC;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8BD8BC;
+}
+
+.cta-button {
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8BD8BC;
+    color: white;
+    padding: 0.6rem 1.6rem; /* Reduced padding for a flatter look */
+    border-radius: 10px;    /* Reduced border-radius for a flatter look */
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 20px rgba(139, 216, 188, 0.4);
+    margin-top: 2rem;
+    width: 150px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.cta-button:hover {
+    background-color: #6ca892;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 18px rgba(108, 168, 146, 0.5);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 5rem 0;
+    background: linear-gradient(160deg, #e3e9ff, #f5f5f5, #e3e9ff);
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.hero-section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #8BD8BC;
+}
+
+.hero-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pricing-tiers {
+    padding: 4rem 0;
+    background-color: #e3e9ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin: 0 1rem;
+}
+
+.col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.15);
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 3px solid #8BD8BC;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.discounted-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1.4rem;
+}
+
+.current-price {
+    font-size: 2rem;
+    color: #8BD8BC;
+    margin-left: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 2rem 0;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8BD8BC;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #8BD8BC;
+    padding: 1.5rem 2.5rem;
+    border: 2px solid #8BD8BC;
+    border-radius: 25px;
+    display: inline-block;
+    background-color: #f5f5f5;
+    margin-bottom: 3rem;
+}
+
+.rfid-purchase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 0;
+}
+
+li.included::before {
+    content: "✓";
+    color: green;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+li.not-included::before {
+    content: "✗";
+    color: red;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 2rem 0;
+    border-top: 2px solid #E0E0E0;
+    border-bottom: 2px solid #E0E0E0;
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    padding: 1rem 0;
+    border-bottom: 1px dashed #E0E0E0;
+    margin-bottom: 1rem;
+}
+
+.faq-item:last-child {
+    border-bottom: none; /* Removes the bottom border for the last item */
+}
+
+.faq-item h3 {
+    color: #8BD8BC;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
