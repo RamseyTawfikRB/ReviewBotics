@@ -1,0 +1,199 @@
+/* Reset some default styles and set a global box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles for body and text */
+body, h1, h2, p, a {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+body {
+    background: linear-gradient(45deg, #f5f5f5, #e3e9ff);
+    margin: 0;
+}
+
+/* Main content and Section styling */
+main {
+    padding: 3rem 5%;
+    margin: 3rem auto;
+}
+
+section {
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #444;
+    border-bottom: 2px solid #8BD8BC;
+    padding-bottom: 1rem;
+}
+
+/* Input and Button styles */
+input[type="radio"] {
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+label {
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="url"] {
+    width: 100%;
+    padding: 0.9rem 1.3rem;
+    border-radius: 7px;
+    border: 1.5px solid #e0e0e0;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="url"]:focus {
+    border-color: #8BD8BC;
+    box-shadow: 0 4px 12px rgba(139, 216, 188, 0.25);
+}
+
+button {
+    display: block;
+    background-color: #8BD8BC;
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 7px;
+    margin: 0 auto;
+    transition: background-color 0.4s, transform 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7AC6B1;
+    transform: translateY(-2px);
+}
+
+/* Shipping Card Styles */
+.shipping-option {
+    background-color: #f8f8f8;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-option label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.shipping-option input[type="radio"] {
+    display: none;
+}
+
+.shipping-option input[type="radio"]:checked + label {
+    background-color: #e1f5e7;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 30px;
+    color: #8BD8BC;
+}
+
+label strong {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Style for clicked RFID cards */
+.rfid-card.active {
+    background: linear-gradient(45deg,#7AC6B1, #e3e9ff); /* Match the page background */
+    color: #333;
+    cursor: pointer; /* Restore pointer cursor when active */
+}
+
+/* Add spacing to the "Shipping Information" section */
+section:nth-child(2) {
+    margin-bottom: 3rem; /* Add margin to the bottom */
+    padding: 3rem; /* Add padding for spacing within the section */
+}
+
+/* Add spacing between entries in the "Shipping Information" section */
+.info-form input[type="text"],
+.info-form input[type="url"] {
+    margin-bottom: 2rem; /* Add margin between input fields */
+}
+
+.info-form label {
+    margin-bottom: 1rem; /* Add margin between labels */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer div {
+    margin-top: 1rem;
+}
+
+footer a {
+    margin: 0 1rem;
+}
+
+/* Additional styles for improved readability and spacing */
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 5%;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.rfidcard {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
