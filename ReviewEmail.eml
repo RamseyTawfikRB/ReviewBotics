@@ -1,0 +1,74 @@
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+From: Your Store <store@example.com>
+To: Customer Name <customer@example.com>
+Subject: Thank You for Shopping with Us!
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff6c00;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Thank You for Shopping with Us!</h1>
+        </div>
+        <p>Dear Customer Name,</p>
+        <p>We wanted to take a moment to express our sincere gratitude for choosing to shop with us. We hope you had a wonderful shopping experience and found exactly what you were looking for.</p>
+        <p>Your feedback is invaluable to us, and we kindly ask you to share your thoughts by leaving a review about your recent purchase. Your review helps us continually improve our products and services, and it assists other customers in making informed decisions.</p>
+        <p><a href="[Insert Review Link Here]" class="button">Leave a Review</a></p>
+        <p>If you have any questions or require further assistance, our dedicated customer support team is here to help. You can reach us at <a href="mailto:support@example.com">support@example.com</a>.</p>
+        <p>Once again, thank you for choosing us. We eagerly anticipate the opportunity to serve you again in the future.</p>
+        <div class="footer">
+            <p>Your Store &bull; Address &bull; Phone: (123) 456-7890 &bull; <a href="https://www.example.com" style="color: #888; text-decoration: none;">www.example.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
