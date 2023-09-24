@@ -1,142 +1,202 @@
-/* Reset some default styles and set a global box-sizing */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Enhanced styles for the Select RFID Card Pack section */
+
+.rfid-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto; /* Adjusted for spacing */
 }
 
-/* Global styles for body and text */
-body, h1, h2, p, a {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-body {
-    background: linear-gradient(45deg, #f5f5f5, #e3e9ff);
-    margin: 0;
-}
-
-/* Main content and Section styling */
-main {
-    padding: 3rem 5%;
-    margin: 3rem auto;
-}
-
-section {
-    padding: 2.5rem;
-    margin-bottom: 2.5rem;
+.rfid-card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
     border-radius: 8px;
-    background-color: #f8f8f8;
+    padding: 20px;
+    font-size: 20px;  /* Slightly larger font for better readability */
+    text-align: center;
+    transition: all 0.3s ease;  /* Smooth transitions */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);  /* Slight shadow for depth */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.rfid-card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A deeper shadow on hover */
+    transform: translateY(-5px); /* A slight lift to indicate selection */
+}
+
+.rfid-card:active {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Pressed effect */
+    transform: translateY(0px);  /* Reset position */
 }
 
 h2 {
-    margin-bottom: 2rem;
-    font-weight: 600;
-    color: #444;
-    border-bottom: 2px solid #8BD8BC;
-    padding-bottom: 1rem;
+    text-align: center;   /* Horizontally center the text */
+    font-size: 2rem;      /* Increasing the font size for prominence */
+    font-weight: bold;    /* Making the text bolder */
+    margin: 20px 0;       /* Adjusted margins */
+    padding: 10px;        /* Some padding for a more balanced look */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adding a slight white backdrop for better readability */
 }
 
-/* Input and Button styles */
-input[type="radio"] {
-    margin-right: 1rem;
-    margin-top: 0.5rem;
+body {
+    margin: 0;
 }
 
-label {
-    font-weight: 500;
-    color: #555;
-    display: block;
-    margin-bottom: 1rem;
+/* Styles for the Shipping Information section */
+
+.info-form {
+    max-width: 800px;
+    margin: 40px auto; /* Similar spacing as the previous section */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Splitting the form into two columns for better layout */
+    gap: 20px; 
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #eaeaea; /* Border to match previous section */
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);  /* Slight shadow for depth */
 }
 
-input[type="text"], input[type="url"] {
-    width: 100%;
-    padding: 0.9rem 1.3rem;
-    border-radius: 7px;
-    border: 1.5px solid #e0e0e0;
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+.info-form input[type="text"], .info-form input[type="url"] {
+    width: 100%; /* Full-width inputs */
+    padding: 10px;
+    border: 1px solid #eaeaea; /* Slight border for inputs */
+    border-radius: 5px; /* Rounded edges for inputs */
+    font-size: 16px;  /* Slight font size adjustment for readability */
+    transition: all 0.3s ease;  /* Smooth transitions */
 }
 
-input[type="text"]:focus, input[type="url"]:focus {
-    border-color: #8BD8BC;
-    box-shadow: 0 4px 12px rgba(139, 216, 188, 0.25);
+.info-form input[type="text"]:focus, .info-form input[type="url"]:focus {
+    outline: none;
+    border-color: #8BD8BC; /* Change border color on focus */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);  /* Slight shadow for depth on focus */
 }
 
-button {
-    display: block;
-    background-color: #8BD8BC;
-    color: #fff;
-    padding: 1.2rem 2.5rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-    border-radius: 7px;
-    margin: 0 auto;
-    transition: background-color 0.4s, transform 0.3s;
-}
+/* Styles for the Shipping Method section */
 
-button:hover {
-    background-color: #7AC6B1;
-    transform: translateY(-2px);
-}
-
-/* Shipping Card Styles */
 .shipping-option {
-    background-color: #f8f8f8;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-
-.shipping-option label {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding: 10px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
     cursor: pointer;
 }
 
+.shipping-option:hover {
+    background-color: #f9f9f9;
+}
+
+.shipping-option label {
+    flex: 1;
+    margin-left: 10px;  /* space between the radio button and label */
+    font-size: 16px;
+}
+
 .shipping-option input[type="radio"] {
-    display: none;
+    width: 20px;
+    height: 20px;
 }
 
-.shipping-option input[type="radio"]:checked + label {
-    background-color: #e1f5e7;
+.shipping-option .price {
+    font-weight: bold;
+    color: #8BD8BC; /* to highlight the price */
 }
 
-.price {
-    font-weight: 600;
-    font-size: 30px;
-    color: #8BD8BC;
+/* Styles for the Order Summary section */
+
+.order-details {
+    max-width: 800px;
+    margin: 40px auto; /* Consistent spacing as previous sections */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 }
 
-label strong {
-    font-size: 1.2rem;
-    color: #444;
+.order-details p {
+    margin: 10px 0; /* Slight spacing for better readability */
+    font-size: 16px; /* Matching font-size from other sections */
 }
 
-/* Style for clicked RFID cards */
-.rfid-card.active {
-    background: linear-gradient(45deg,#7AC6B1, #e3e9ff); /* Match the page background */
-    color: #333;
-    cursor: pointer; /* Restore pointer cursor when active */
+.order-line {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 20px 0; /* Giving some spacing around the divider line */
 }
 
-/* Add spacing to the "Shipping Information" section */
-section:nth-child(2) {
-    margin-bottom: 3rem; /* Add margin to the bottom */
-    padding: 3rem; /* Add padding for spacing within the section */
+#taxTotal, #orderTotal {
+    font-weight: bold; /* Emphasizing the total amounts */
 }
 
-/* Add spacing between entries in the "Shipping Information" section */
-.info-form input[type="text"],
-.info-form input[type="url"] {
-    margin-bottom: 2rem; /* Add margin between input fields */
+/* ... [your existing styles] ... */
+
+/* Enhanced Styles for the Credit Card Details section (Vertical Layout) */
+
+.credit-card-form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px; 
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 30px;
 }
 
-.info-form label {
-    margin-bottom: 1rem; /* Add margin between labels */
+.credit-card-form label {
+    display: block;
+    margin-bottom: 8px; 
+    font-weight: 500;
+    font-size: 0.95em;
+    color: #555;
 }
+
+.credit-card-form input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credit-card-form input[type="text"]:focus {
+    border-color: #8BD8BC;
+    outline: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.credit-card-form button {
+    padding: 12px 0;
+    background-color: #8BD8BC;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Making sure the button stretches full width */
+}
+
+.credit-card-form button:hover {
+    background-color: #6abba6;
+    transform: translateY(-2px);
+}
+
+.credit-card-form button:active {
+    background-color: #5da992;
+    transform: translateY(0);
+}
+
+/* CVV styling remains consistent with the general input style */

@@ -1,66 +1,50 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Order Summary</title>
-    <link href="CheckoutStyle.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-    <script src="Checkoutscript.js" defer></script>
+    <script defer="" src="Checkoutscript.js"></script>
 </head>
+
 <body>
     <header>
-        <img src="Pictures/Logo.webp" alt="ReviewBotics Logo" id="logo">
+        <img alt="ReviewBotics Logo" id="logo" src="Pictures/Logo.webp" />
         <h1>ReviewBotics</h1>
         <nav>
             <a href="Home.html">Home</a>
             <a href="pricing.html">Pricing</a>
             <a href="about.html">About</a>
             <a href="Login.html">Log In</a>
-            <a href="buyrfid.html" class="active">Buy RFID</a>
+            <a class="active" href="buyrfid.html">Buy RFID</a>
         </nav>
     </header>
+
     <!-- Main content for Order Summary -->
     <main>
         <section>
-            <h2>Order Summary</h2>
-            <!-- Display order summary information here -->
-            <div class="order-details">
-                <p id="orderedRFIDCard">Ordered RFID Card Pack:</p>
-                <p id="shippingMethod">Shipping Method:</p>
-                <div class="order-line"></div>
-                <p id="taxTotal">Tax:</p>
-                <p id="orderTotal">Order Total:</p>
-            </div>
-        </section>
-        <section>
-        <section>
-            <h2>Credit Card Details</h2>
-            <form class="credit-card-form">
-                <label for="cardNumber">Card Number</label>
-                <input type="text" id="cardNumber" placeholder="Enter Card Number" required>
-                <label for="expiration">Expiration Date</label>
-                <input type="text" id="expiration" placeholder="MM/YY" required>
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" placeholder="Enter CVV" required>
-                <button type="submit">Complete Order</button>
-            </form>
+            <h2>Thank You For Shopping With Us!</h2>
+            <p>Your order has been successfully received. We will send you a receipt shortly.</p>
+            <p>If you have any questions or need assistance with your order, please don't hesitate to <a href="contact.html">contact us</a>.</p>
+            <a href="Home.html" class="button">Return to Home</a>
         </section>
     </main>
+    
     <!-- Footer (Reusing the same footer from your previous page) -->
     <footer>
         <p>© 2023 ReviewBotics. All rights reserved.</p>
         <div>
-            <a href="https://www.facebook.com/profile.php?id=61551244585392" rel="noopener noreferrer" target="_blank">
-                <img alt="Facebook" src="Pictures/facebook.png" />
-            </a>
-            <a href="https://twitter.com/ReviewBotics" rel="noopener noreferrer" target="_blank">
-                <img alt="Twitter" src="Pictures/twitter.png" />
-            </a>
-            <a href="https://instagram.com/ReviewBotics" rel="noopener noreferrer" target="_blank">
-                <img alt="Instagram" src="Pictures/insta.jpg" />
-            </a>
+            <a href="https://www.facebook.com/profile.php?id=61551244585392" rel="noopener noreferrer"
+                target="_blank"><img alt="Facebook" src="Pictures/facebook.png" /></a>
+            <a href="https://twitter.com/ReviewBotics" rel="noopener noreferrer" target="_blank"><img alt="Twitter"
+                    src="Pictures/twitter.png" /></a>
+            <a href="https://www.instagram.com/reviewbotics/" rel="noopener noreferrer" target="_blank"><img
+                    alt="Instagram" src="Pictures/insta.jpg" /></a>
         </div>
     </footer>
 </body>
+
 </html>

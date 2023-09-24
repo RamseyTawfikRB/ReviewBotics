@@ -1,84 +1,74 @@
-/* Header Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+body {
+    background: linear-gradient(45deg, #f5f5f5, #e3e9ff);
+    margin: 0;
+}
+
 header {
+    background-color: #f9f9f9;
+    padding: 1rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    border-bottom: 5px solid #8BD8BC;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 #logo {
-    width: 250px;
-    cursor: pointer;
+    width: 150px; /* or your desired size */
 }
 
-h1, .col h3 {
-    font-weight: 700;
-    color: #8BD8BC;
-    font-size: 2rem;
-    margin-left: 1rem;
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-h1 {
-    margin-left: 1rem;
+nav {
+    display: flex;
+    gap: 1rem;
 }
 
 nav a {
-    margin: 0 0.7rem;
     text-decoration: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
-}
-
-nav a:hover, footer a:hover {
-    background-color: #8BD8BC;
-    color: white;
-    transform: translateY(-2px);
-}
-
-/* Footer Styles */
-footer {
-    background-color: white;
     color: #333;
-    padding: 1.5rem 0;
-    text-align: center;
-    box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #8BD8BC;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
 }
 
-footer div {
+nav a:hover {
+    background-color: #e3e9ff;
+}
+
+nav a.active {
+    background-color: #8BD8BC;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #f9f9f9;
+    padding: 1rem 10%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.1);
 }
 
-footer div a img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    margin-right: 10px;
+footer img {
+    width: 24px; /* adjust size if necessary */
+    margin-left: 10px;
 }
 
-footer div a:last-child img {
-    margin-right: 0;
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-footer a {
-    color: #8BD8BC;
-    text-decoration: none;
-    margin: 0 0.8rem;
-    transition: transform 0.3s ease;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-footer a:hover {
-    transform: translateY(-2px);
+::-webkit-scrollbar-thumb {
+    background: #8BD8BC;
 }

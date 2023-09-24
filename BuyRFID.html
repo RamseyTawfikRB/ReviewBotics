@@ -7,30 +7,46 @@
     <title>Buy RFID</title>
     <link href="BuyRFIDStyle.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-    <script src="BuyRFIDscript.js" defer></script>
+    <script defer="" src="BuyRFIDscript.js"></script>
 </head>
 
 <body>
     <header>
-        <img src="Pictures/Logo.webp" alt="ReviewBotics Logo" id="logo">
+        <img alt="ReviewBotics Logo" id="logo" src="Pictures/Logo.webp" />
         <h1>ReviewBotics</h1>
         <nav>
             <a href="Home.html">Home</a>
             <a href="pricing.html">Pricing</a>
             <a href="about.html">About</a>
             <a href="Login.html">Log In</a>
-            <a href="buyrfid.html" class="active">Buy RFID</a>
+            <a class="active" href="buyrfid.html">Buy RFID</a>
         </nav>
     </header>
-
     <main>
+
         <!-- Section 1: RFID Card Options -->
         <section>
             <h2>Select RFID Card Pack</h2>
-            <div class="rfid-selection">
-                <div class="rfid-card" tabindex="0">10 Pack - $39.99</div>
-                <div class="rfid-card" tabindex="0">20 Pack - $69.99</div>
-                <div class="rfid-card" tabindex="0">50 Pack - $149.99</div>
+            <div class="shipping-option">
+                <input id="pack10" name="rfid-pack" required="" type="radio" value="pack10" />
+                <label for="pack10">
+                    <strong>10 Pack of RFID Cards</strong>
+                    <span class="price">$39.99</span>
+                </label>
+            </div>
+            <div class="shipping-option">
+                <input id="pack20" name="rfid-pack" required="" type="radio" value="pack20" />
+                <label for="pack20">
+                    <strong>20 Pack of RFID Cards</strong>
+                    <span class="price">$69.99</span>
+                </label>
+            </div>
+            <div class="shipping-option">
+                <input id="pack50" name="rfid-pack" required="" type="radio" value="pack50" />
+                <label for="pack50">
+                    <strong>50 Pack of RFID Cards</strong>
+                    <span class="price">$149.99</span>
+                </label>
             </div>
         </section>
 
@@ -38,13 +54,13 @@
         <section>
             <h2>Shipping Information</h2>
             <form class="info-form">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Address Line 1">
-                <input type="text" placeholder="Address Line 2 (Optional)">
-                <input type="text" placeholder="City">
-                <input type="text" placeholder="State/Province">
-                <input type="text" placeholder="Postal Code">
-                <input type="text" placeholder="Country">
+                <input placeholder="Full Name" type="text" />
+                <input placeholder="Address Line 1" type="text" />
+                <input placeholder="Address Line 2 (Optional)" type="text" />
+                <input placeholder="City" type="text" />
+                <input placeholder="State/Province" type="text" />
+                <input placeholder="Postal Code" type="text" />
+                <input placeholder="Country" type="text" />
             </form>
         </section>
 
@@ -52,26 +68,31 @@
         <section>
             <h2>Shipping Method</h2>
             <div class="shipping-option">
-                <input type="radio" id="express" name="shipping" value="express" required>
-                <label for="express">
+                <input id="express-shipping" name="shipping-method" required="" type="radio" value="express" />
+                <label for="express-shipping">
                     <strong>Priority Mail Express - 1 Day</strong>
                     <span class="price">$49.45</span>
                 </label>
             </div>
-
             <div class="shipping-option">
-                <input type="radio" id="priority" name="shipping" value="priority" required>
-                <label for="priority">
+                <input id="priority-shipping" name="shipping-method" required="" type="radio" value="priority" />
+                <label for="priority-shipping">
                     <strong>Priority Mail - 3 Days</strong>
                     <span class="price">$22.60</span>
                 </label>
             </div>
-
             <div class="shipping-option">
-                <input type="radio" id="retail" name="shipping" value="retail" required>
-                <label for="retail">
+                <input id="retail-shipping1" name="shipping-method" required="" type="radio" value="retail" />
+                <label for="retail-shipping1">
                     <strong>USPS Retail Ground - 7 Days</strong>
                     <span class="price">$10.85</span>
+                </label>
+            </div>
+            <div class="shipping-option">
+                <input id="retail-shipping2" name="shipping-method" required="" type="radio" value="retail" />
+                <label for="retail-shipping2">
+                    <strong>Local Drop Off (Orange County and Seattle) - 3 Days</strong>
+                    <span class="price">$5.99</span>
                 </label>
             </div>
         </section>
@@ -81,32 +102,50 @@
             <h2>Input RFID Links</h2>
             <form class="info-form">
                 <label for="rfidLink">RFID Link</label>
-                <input type="url" id="rfidLink" placeholder="Enter RFID Link">
-
+                <input id="rfidLink" placeholder="Enter RFID Link" type="url" />
                 <label for="backupRfidLink">Backup RFID Link</label>
-                <input type="url" id="backupRfidLink" placeholder="Enter Backup RFID Link">
+                <input id="backupRfidLink" placeholder="Enter Backup RFID Link" type="url" />
             </form>
         </section>
 
-        <button type="submit" id="checkoutButton">Proceed to Checkout</button>
+        <section>
+            <h2>Order Summary</h2>
+            <!-- Display order summary information here -->
+            <div class="order-details">
+                <p id="orderedRFIDCard">Ordered RFID Card Pack:</p>
+                <p id="shippingMethod">Shipping Method:</p>
+                <div class="order-line"></div>
+                <p id="taxTotal">Tax:</p>
+                <p id="orderTotal">Order Total:</p>
+            </div>
+        </section>
 
+        <section>
+            <h2>Credit Card Details</h2>
+            <form class="credit-card-form" action="Checkout.html" method="post">
+                <label for="cardName">Name on Card</label>
+                <input id="cardName" placeholder="Enter Card User's Name" required="" type="text" />
+                <label for="cardNumber">Card Number</label>
+                <input id="cardNumber" placeholder="Enter Card Number" required="" type="text" />
+                <label for="expiration">Expiration Date</label>
+                <input id="expiration" placeholder="MM/YY" required="" type="text" />
+                <label for="cvv">CVV</label>
+                <input id="cvv" placeholder="Enter CVV" required="" type="text" />
+                <button type="submit">Complete Order</button>
+            </form>
+        </section>        
     </main>
-
     <footer>
         <p>© 2023 ReviewBotics. All rights reserved.</p>
         <div>
-            <a href="https://www.facebook.com/profile.php?id=61551244585392" rel="noopener noreferrer" target="_blank">
-                <img alt="Facebook" src="Pictures/facebook.png" />
-            </a>
-            <a href="https://twitter.com/ReviewBotics" rel="noopener noreferrer" target="_blank">
-                <img alt="Twitter" src="Pictures/twitter.png" />
-            </a>
-            <a href="https://instagram.com/ReviewBotics" rel="noopener noreferrer" target="_blank">
-                <img alt="Instagram" src="Pictures/insta.jpg" />
-            </a>
+            <a href="https://www.facebook.com/profile.php?id=61551244585392" rel="noopener noreferrer"
+                target="_blank"><img alt="Facebook" src="Pictures/facebook.png" /></a>
+            <a href="https://twitter.com/ReviewBotics" rel="noopener noreferrer" target="_blank"><img alt="Twitter"
+                    src="Pictures/twitter.png" /></a>
+            <a href="https://www.instagram.com/reviewbotics/" rel="noopener noreferrer" target="_blank"><img
+                    alt="Instagram" src="Pictures/insta.jpg" /></a>
         </div>
     </footer>
-
 </body>
 
 </html>
