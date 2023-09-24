@@ -1,0 +1,51 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* This assumes that the header and footer take up the remaining space. Adjust as necessary. */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+section {
+    background-color: #ffffff; /* White background for the section */
+    padding: 40px 60px; /* Padding around the section content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Centered text */
+    width: 80%; /* Taking 80% width of the parent container */
+    max-width: 600px; /* Maximum width to ensure it doesn't get too wide on large screens */
+}
+
+h2 {
+    font-size: 2em; /* Increased font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333333; /* Dark gray color for the heading */
+}
+
+p {
+    font-size: 1.2em; /* Font size for the paragraphs */
+    margin-bottom: 20px; /* Space below each paragraph */
+    color: #555555; /* Medium gray color for the text */
+}
+
+a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Removing the underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for better indication */
+}
+
+.button {
+    display: inline-block;
+    background-color: #007BFF; /* Blue background color for the button */
+    color: #ffffff; /* White color for the button text */
+    padding: 10px 30px; /* Top-bottom and left-right padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
