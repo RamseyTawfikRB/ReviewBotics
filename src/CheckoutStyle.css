@@ -1,135 +1,51 @@
-/* Reset some default styles and set a global box-sizing */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Global styles for body and text */
-body, h1, h2, p, a {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-body {
-    background: linear-gradient(45deg, #f5f5f5, #e3e9ff);
-    margin: 0;
-}
-
-/* Main content and Section styling */
 main {
-    padding: 3rem 5%;
-    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* This assumes that the header and footer take up the remaining space. Adjust as necessary. */
+    background-color: #f5f5f5; /* Light gray background */
 }
 
 section {
-    padding: 2.5rem;
-    margin-bottom: 2.5rem;
-    border-radius: 8px;
-    background-color: #f8f8f8;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background for the section */
+    padding: 40px 60px; /* Padding around the section content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Centered text */
+    width: 80%; /* Taking 80% width of the parent container */
+    max-width: 600px; /* Maximum width to ensure it doesn't get too wide on large screens */
 }
 
 h2 {
-    margin-bottom: 2rem;
-    font-weight: 600;
-    color: #444;
-    border-bottom: 2px solid #8BD8BC;
-    padding-bottom: 1rem;
+    font-size: 2em; /* Increased font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333333; /* Dark gray color for the heading */
 }
 
-/* Input and Button styles */
-input[type="text"], input[type="url"] {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 7px;
-    border: 1.5px solid #e0e0e0;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+p {
+    font-size: 1.2em; /* Font size for the paragraphs */
+    margin-bottom: 20px; /* Space below each paragraph */
+    color: #555555; /* Medium gray color for the text */
 }
 
-input[type="text"]:focus, input[type="url"]:focus {
-    border-color: #8BD8BC;
-    box-shadow: 0 4px 12px rgba(139, 216, 188, 0.25);
+a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Removing the underline */
 }
 
-button {
-    display: block;
-    background-color: #8BD8BC;
-    color: #fff;
-    padding: 1rem 2rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 7px;
-    margin: 0 auto;
-    transition: background-color 0.4s, transform 0.3s;
+a:hover {
+    text-decoration: underline; /* Underline on hover for better indication */
 }
 
-button:hover {
-    background-color: #7AC6B1;
-    transform: translateY(-2px);
+.button {
+    display: inline-block;
+    background-color: #007BFF; /* Blue background color for the button */
+    color: #ffffff; /* White color for the button text */
+    padding: 10px 30px; /* Top-bottom and left-right padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition effect */
 }
 
-/* Order Summary Styles */
-.order-details {
-    margin-bottom: 2rem;
-}
-
-.order-details p {
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #444;
-    margin-bottom: 1rem;
-}
-
-/* Credit Card Form Styles */
-.credit-card-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.credit-card-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #444;
-}
-
-.credit-card-form input[type="text"] {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 7px;
-    border: 1.5px solid #e0e0e0;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.credit-card-form input[type="text"]:focus {
-    border-color: #8BD8BC;
-    box-shadow: 0 4px 12px rgba(139, 216, 188, 0.25);
-}
-
-/* Tax and Total Styles */
-.tax-total {
-    margin-top: 2rem;
-    text-align: right;
-}
-
-.tax-total p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #666;
-}
-
-.total-amount {
-    font-weight: bold;
-    font-size: 1.25rem;
-    color: #444;
-    border-top: 2px solid #8BD8BC;
-    padding-top: 1rem;
-    margin-top: 1rem;
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

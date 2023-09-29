@@ -1,66 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const rfidCards = document.querySelectorAll(".rfid-card");
-    let selectedOption = null; // Variable to store the selected option
+document.addEventListener("DOMContentLoaded", function() {
 
-    rfidCards.forEach(function (card) {
-        card.addEventListener("click", function () {
-            rfidCards.forEach(function (c) {
-                c.classList.remove("active");
-            });
-            card.classList.add("active");
-            selectedOption = card.textContent; // Store the selected option
-            updateOrderSummary(); // Call the function to update the order summary
+    const rfidInputs = document.querySelectorAll('input[name="rfid-pack"]');
+    const shippingInputs = document.querySelectorAll('input[name="shipping-method"]');
+    
+    rfidInputs.forEach(rfidInput => {
+        rfidInput.addEventListener('change', updateSummary);
+    });
+    
+    shippingInputs.forEach(shippingInput => {
+        shippingInput.addEventListener('change', updateSummary);
+    });
+    
+    function updateSummary() {
+        let rfidPrice = 0;
+        let shippingPrice = 0;
+        
+        rfidInputs.forEach(input => {
+            if (input.checked) {
+                const label = document.querySelector(`label[for="${input.id}"]`);
+                rfidPrice = parseFloat(label.querySelector('.price').textContent.replace('$', ''));
+            }
         });
-    });
 
-    // Function to gather user inputs
-    function gatherUserInputs() {
-        const shippingMethod = document.querySelector('input[name="shipping"]:checked').nextElementSibling.textContent;
-        const rfidLink = document.getElementById("rfidLink").value;
-        const backupRfidLink = document.getElementById("backupRfidLink").value;
+        shippingInputs.forEach(input => {
+            if (input.checked) {
+                const label = document.querySelector(`label[for="${input.id}"]`);
+                shippingPrice = parseFloat(label.querySelector('.price').textContent.replace('$', ''));
+            }
+        });
+        
+        const tax = (rfidPrice + shippingPrice) * 0.15; // Assuming a tax rate of 10%
+        const total = rfidPrice + shippingPrice + tax;
 
-        return {
-            selectedOption,
-            shippingMethod,
-            rfidLink,
-            backupRfidLink
-        };
+        document.getElementById('orderedRFIDCard').textContent = `Ordered RFID Card Pack: $${rfidPrice.toFixed(2)}`;
+        document.getElementById('shippingMethod').textContent = `Shipping Method: $${shippingPrice.toFixed(2)}`;
+        document.getElementById('taxTotal').textContent = `Tax: $${tax.toFixed(2)}`;
+        document.getElementById('orderTotal').textContent = `Order Total: $${total.toFixed(2)}`;
     }
-
-    function updateOrderSummary() {
-        const {
-            selectedOption,
-            shippingMethod,
-            rfidLink,
-            backupRfidLink
-        } = gatherUserInputs();
-
-        // Set the text content of the <p> elements to the gathered values
-        document.getElementById("orderedRFIDCard").textContent = `Ordered RFID Card Pack: ${selectedOption}`;
-        document.getElementById("shippingMethod").textContent = `Shipping Method: ${shippingMethod}`;
-        document.getElementById("rfidLink").textContent = `RFID Link: ${rfidLink}`;
-        document.getElementById("backupRfidLink").textContent = `Backup RFID Link: ${backupRfidLink}`;
-    }
-
-    // Locate the "Proceed to Checkout" button by its ID
-    const checkoutButton = document.getElementById("checkoutButton");
-
-    checkoutButton.addEventListener("click", function () {
-        // Gather user inputs and update the order summary
-        const {
-            selectedOption,
-            shippingMethod,
-            rfidLink,
-            backupRfidLink
-        } = gatherUserInputs();
-
-        // Set the order summary data in local storage for access on the "Order Summary" page
-        localStorage.setItem("selectedOption", selectedOption);
-        localStorage.setItem("shippingMethod", shippingMethod);
-        localStorage.setItem("rfidLink", rfidLink);
-        localStorage.setItem("backupRfidLink", backupRfidLink);
-
-        // Navigate to the checkout page when the button is clicked
-        window.location.href = "checkout.html";
-    });
 });
