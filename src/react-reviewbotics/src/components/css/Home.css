@@ -1,0 +1,239 @@
+/* HERO STYLING */
+.hero-section {
+    background-color: #f9fafc;
+    padding: 5rem 5%;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-image {
+    width: 80%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.hero-subtitle, .hero-description {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px;
+}
+
+.hero-goals {
+    text-align: left;
+    max-width: 800px;
+    margin-top: 2rem;
+}
+
+.hero-goals h3 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.hero-goals-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hero-goals-list li {
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px; /* Rounded edges */
+    background-color: #8BD8BC;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700; /* Bold font */
+    font-size: 1.2em;
+    letter-spacing: 1px; /* Spaced letters */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+.cta-button:hover {
+    background-color: #6da490;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* Increased shadow for lifted effect */
+}
+
+.cta-button:active {
+    transform: translateY(1px); /* Push down effect on active/click */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Decreased shadow to mimic push */
+}
+
+/* BENEFITS SECTION */
+.benefits-section {
+    background-color: #e9ecef;
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.benefits-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 600;
+    text-decoration: underline; /* Underlining the heading for emphasis */
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem; /* Increased spacing for better separation */
+}
+
+.grid .col {
+    flex-basis: calc(33.333% - 2rem); /* This ensures three columns layout */
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid .col:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow for emphasis */
+}
+
+.grid h3 {
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.grid p {
+    color: #666; /* Slightly subdued text color for contrast */
+    line-height: 1.6;
+}
+
+/* HOW IT WORKS SECTION */
+#how-it-works {
+    background-color: #f9fafc;
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+#how-it-works h2 {
+    font-size: 2.8em;
+    margin-bottom: 3rem;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 4px solid #8BD8BC;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#how-it-works ol {
+    counter-reset: item;  /* Initialize the counter */
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+#how-it-works ol li {
+    flex-basis: calc(45% - 1rem); /* Adjusted for two items per row */
+    background-color: #ffffff;
+    padding: 3rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    font-size: 1.1em;
+}
+
+#how-it-works ol li:before {
+    content: counter(item) ".";
+    counter-increment: item;  /* Increment the counter */
+    position: absolute;
+    top: -20px;  /* Adjust this value for the desired distance from the top */
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: #8BD8BC;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#how-it-works ol li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+/* CALL TO ACTION SECTION */
+#cta {
+    background-color: #8BD8BC; /* Using a brand color to make the section stand out */
+    padding: 5rem 5%;
+    text-align: center;
+    color: #fff; /* Setting default text color to darkgreen for readability against the background */
+}
+
+#cta h2 {
+    font-size: 3em;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+#cta p {
+    font-size: 1.5em;
+    margin-bottom: 2.5rem; /* Providing space between the text and the button */
+    line-height: 1.6;
+}
+
+#cta .cta-button { /* Assuming you have a button with this class in the section */
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: #333; /* Contrasting color for the button */
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#cta .cta-button:hover {
+    background-color: #111; /* Slightly darker shade on hover */
+    transform: translateY(-5px);
+}
+
+#cta .cta-button:active {
+    transform: translateY(2px);
+}
